@@ -13,7 +13,7 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/React-Driver">
       <Provider store={store}>
         <PersistGate persistor={persistor}>
           <App />
