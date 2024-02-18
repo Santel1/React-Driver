@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkreact_driver=self.webpackChunkreact_driver||[]).push([[864],{864:(e,r,n)=>{n.r(r),n.d(r,{default:()=>l});var t,c=n(312);const a=n(360).cp.div(t||(t=(0,c.c)(["\n  text-align: center;\n  font-family: var(--font-family);\n  font-weight: 500;\n  font-size: 16px;\n  line-height: 150%;\n  color: var(--primery-color-black);\n"])));var i=n(496);const l=()=>(0,i.jsx)(a,{children:"Welkome to rent car service"})}}]);
-//# sourceMappingURL=864.0f1ed018.chunk.js.map
