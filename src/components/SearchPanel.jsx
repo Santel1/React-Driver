@@ -21,12 +21,14 @@ const SearchPanel = ({
             onChange={handleSelectChange}
             value={selectedCar}
           >
-            <option value="">All</option>
+            <option className="searchOption" value="">
+              All
+            </option>
             {[...carsModel]
               .sort((a, b) => a.localeCompare(b))
               .map((car, index) => {
                 return (
-                  <option key={index} value={car}>
+                  <option className="searchOption" key={index} value={car}>
                     {car}
                   </option>
                 );
@@ -41,7 +43,7 @@ const SearchPanel = ({
             <option value="">To $</option>
           </select>
         </li>
-        <li className="searchPanelItem fromTo">
+        <li className="searchPanelItem">
           <label className="searchPanelLabel" htmlFor="pet-select">
             Сar mileage / km
           </label>
@@ -60,10 +62,11 @@ const SearchPanel = ({
             />
           </div>
         </li>
-
-        <button className="searchPanelBtn" onClick={handleSearch}>
-          Search
-        </button>
+        <li className="searchPanelItem">
+          <button className="searchPanelBtn" onClick={handleSearch}>
+            Search
+          </button>
+        </li>
       </ul>
     </SearchPanelStyle>
   );

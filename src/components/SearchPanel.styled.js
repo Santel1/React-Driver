@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SearchPanelStyle = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
   .searchPanelList {
     display: flex;
     flex-direction: row;
@@ -36,12 +37,33 @@ export const SearchPanelStyle = styled.div`
     background-color: var(--secondary-color-blue);
   }
   .searchSelectInput {
+    cursor: pointer;
     border-radius: 14px;
     padding: 14px 18px;
     width: 224px;
     height: 48px;
     border: none;
     background: var(--secondary-color-gray);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--primery-color-gray);
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: var(--primery-color-white);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: var(--primery-color-blue);
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      background-color: var(--primery-color-white);
+    }
   }
   .searchPanelInput {
     border: none;
@@ -51,6 +73,10 @@ export const SearchPanelStyle = styled.div`
     width: 160px;
     height: 48px;
     background: var(--secondary-color-gray);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
     &.right {
       border: none;
       border-radius: 0 14px 14px 0;
@@ -58,5 +84,12 @@ export const SearchPanelStyle = styled.div`
   }
   .rowInput {
     display: flex;
+  }
+  .searchOption {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--primery-color-black);
   }
 `;
