@@ -5,7 +5,7 @@ const rentCarsInstsnce = axios.create({
 });
 
 export const fetchAdvertsAll = async (page) => {
-  const { data } = await rentCarsInstsnce.get(`/adverts`);
+  const { data } = await rentCarsInstsnce.get(`/adverts?page=${page}&limit=12`);
   return data;
 };
 

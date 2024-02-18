@@ -85,7 +85,8 @@ const advertsSlice = createSlice({
       })
       .addCase(requestAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.advertsData = action.payload;
+        // state.advertsData = action.payload;
+        state.advertsData.push(...action.payload);
       })
       .addCase(requestAdverts.rejected, (state, action) => {
         state.isLoading = false;

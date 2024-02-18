@@ -25,20 +25,22 @@ const Catalog = () => {
   const isLoading = useSelector(selectAdvertsIsLoading);
   const error = useSelector(selectAdvertsError);
   const carsModel = useSelector(selectAdvertsModels);
-  const dispatch = useDispatch();
   const filter = useSelector(selectAdvertsFilter);
   const favorites = useSelector(selectAdvertsFavorites);
   const [selectedAdvert, setSelectedAdvert] = useState(false);
   const [selectedCar, setSelectedCar] = useState("");
+  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(requestAdverts());
-  }, [dispatch]);
+    if (adverts.length === 0) {
+      dispatch(requestAdverts(page));
+    }
+  }, [dispatch, page, adverts.length]);
 
   const handleOpenModal = (advert) => {
     setSelectedAdvert(advert);
     document.body.classList.add("modal-open");
-    console.log(advert.length);
   };
 
   const handleCloseModal = () => {
@@ -64,12 +66,16 @@ const Catalog = () => {
     setSelectedAdvert(false);
   };
 
+  const handleLoadMore = () => {
+    setPage(page + 1);
+    dispatch(requestAdverts(page + 1));
+  };
+
   const filteredAdverts =
     adverts !== null &&
     adverts.filter((advert) =>
       advert.make.toLowerCase().includes(filter.toLowerCase().trim())
     );
-
   return (
     <CatalogStyle>
       <SearchPanel
@@ -81,21 +87,34 @@ const Catalog = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <CatalogListStyle>
-          {filteredAdverts &&
-            filteredAdverts.map((advert) => {
-              return (
-                <ListItem
-                  key={advert.id}
-                  advert={advert}
-                  favorites={favorites}
-                  handleClickFavorites={handleClickFavorites}
-                  handleOpenModal={handleOpenModal}
-                />
-              );
-            })}{" "}
-        </CatalogListStyle>
+        <>
+          <CatalogListStyle>
+            {filteredAdverts &&
+              filteredAdverts.map((advert) => {
+                return (
+                  <ListItem
+                    key={advert.id}
+                    advert={advert}
+                    favorites={favorites}
+                    handleClickFavorites={handleClickFavorites}
+                    handleOpenModal={handleOpenModal}
+                  />
+                );
+              })}{" "}
+          </CatalogListStyle>
+
+          {filteredAdverts.length > 11 ? (
+            <div className="wrap">
+              <button className="loadMoreBtn" onClick={handleLoadMore}>
+                LOAD MORE
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
+        </>
       )}
+
       <Modal
         isOpen={selectedAdvert}
         onClose={handleCloseModal}
