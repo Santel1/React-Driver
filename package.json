@@ -2,7 +2,7 @@
   "name": "react-driver",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://santel1.github.io/React-Driver/",
+  "homepage": "https://santel1.github.io/React-Driver",
   "dependencies": {
     "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^1.9.7",
