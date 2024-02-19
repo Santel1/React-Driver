@@ -15,7 +15,7 @@ export const App = () => {
       <Navigation />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route index element={<HomePage />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/favorite" element={<Favorites />} />
         </Routes>
