@@ -15,7 +15,7 @@ root.render(
   // <React.StrictMode>
   <Provider store={store}>
     <PersistGate persistor={persistor}>
-      <BrowserRouter basename="/React-Driver">
+      <BrowserRouter basename="https://santel1.github.io/React-Driver">
         <App />
       </BrowserRouter>
     </PersistGate>
