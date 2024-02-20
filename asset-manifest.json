@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/React-Driver/static/css/main.e1474cf7.css",
-    "main.js": "/React-Driver/static/js/main.cbfb806b.js",
+    "main.js": "/React-Driver/static/js/main.828388e9.js",
     "static/js/276.e5d62e8b.chunk.js": "/React-Driver/static/js/276.e5d62e8b.chunk.js",
-    "static/js/144.f0cf569c.chunk.js": "/React-Driver/static/js/144.f0cf569c.chunk.js",
-    "static/js/44.fd1d7798.chunk.js": "/React-Driver/static/js/44.fd1d7798.chunk.js",
+    "static/js/144.4865013e.chunk.js": "/React-Driver/static/js/144.4865013e.chunk.js",
+    "static/js/44.cb662add.chunk.js": "/React-Driver/static/js/44.cb662add.chunk.js",
     "static/media/homepageimg.png": "/React-Driver/static/media/homepageimg.d238f0d92654438c18ac.png",
     "index.html": "/React-Driver/index.html",
     "static/media/heart.svg": "/React-Driver/static/media/heart.b6520465a38ffa293fbbe38b5846624d.svg",
     "static/media/close.svg": "/React-Driver/static/media/close.071adba7c35af5b9d97d6172dc6008cf.svg",
     "main.e1474cf7.css.map": "/React-Driver/static/css/main.e1474cf7.css.map",
-    "main.cbfb806b.js.map": "/React-Driver/static/js/main.cbfb806b.js.map",
+    "main.828388e9.js.map": "/React-Driver/static/js/main.828388e9.js.map",
     "276.e5d62e8b.chunk.js.map": "/React-Driver/static/js/276.e5d62e8b.chunk.js.map",
-    "144.f0cf569c.chunk.js.map": "/React-Driver/static/js/144.f0cf569c.chunk.js.map",
-    "44.fd1d7798.chunk.js.map": "/React-Driver/static/js/44.fd1d7798.chunk.js.map"
+    "144.4865013e.chunk.js.map": "/React-Driver/static/js/144.4865013e.chunk.js.map",
+    "44.cb662add.chunk.js.map": "/React-Driver/static/js/44.cb662add.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1474cf7.css",
-    "static/js/main.cbfb806b.js"
+    "static/js/main.828388e9.js"
   ]
 }
