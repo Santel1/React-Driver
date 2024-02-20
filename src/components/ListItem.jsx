@@ -29,7 +29,7 @@ const ListItem = ({
       <div className="catalogCarInfo">
         <img
           className="catalogCarImg"
-          // src={advert.photoLink || advert.img}
+          src={advert.photoLink || advert.img}
           alt={`${advert.make} ${advert.model},${advert.year}`}
         />
         <div className="wrapper">
